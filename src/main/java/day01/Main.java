@@ -16,7 +16,7 @@ public class Main {
         try {
             dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
             dataSource.setUser("root");
-            dataSource.setPassword("training");
+            dataSource.setPassword("root");
         } catch (SQLException sqle) {
             throw new IllegalStateException("Cannot reach DataBase!",sqle);
         }
