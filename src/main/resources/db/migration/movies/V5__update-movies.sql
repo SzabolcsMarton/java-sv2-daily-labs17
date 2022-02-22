@@ -1,0 +1,1 @@
+Alter TABLE movies ADD COLUMN avg_rating DOUBLE default null;

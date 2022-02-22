@@ -21,7 +21,7 @@ public class Main {
         }
 
 
-        Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+        Flyway flyway = Flyway.configure().locations("db/migration/movies").dataSource(dataSource).load();
         //flyway.clean();
         flyway.migrate();
 
@@ -34,20 +34,22 @@ public class Main {
         MoviesRatingService moviesRatingService = new MoviesRatingService(moviesRepository,ratingsRepository);
 
 
-//        actorsMoviesService.insertMovieWithActors("Titanic", LocalDate.of(2000,10,11),List.of("Leonardo Dicaprio", "Kate Winslet"));
-//        actorsMoviesService.insertMovieWithActors("Great Gatsby", LocalDate.of(2012,12,10), List.of("Leonardo Dicaprio","Toby"));
 
-        //moviesRatingService.addRatings("Titanic",5, 3, 2);
-        moviesRatingService.addRatings("Great Gatsby", 5,2,4);
+
+
+
+  //      actorsMoviesService.insertMovieWithActors("Star Wars", LocalDate.of(1977,05,25),List.of("Mark Hamill","Harrison Ford","Carrie Fisher"));
+//        actorsMoviesService.insertMovieWithActors("Great Gatsby", LocalDate.of(2012,12,10), List.of("Leonardo Dicaprio","Toby"));
+//
+       // moviesRatingService.addRatings("Titanic",5, 3, 2, 2,5,5,5,5,5,5,5,5);
+       // moviesRatingService.addRatings("Great Gatsby", 5,2,4,3,4);
+        moviesRatingService.addRatings("Star Wars", 1);
 
 
 //        moviesRepository.saveMovie("Filmecske3", LocalDate.of(2022,01,05));
-
 //        List<Movie> movies = moviesRepository.findAllMovies();
 //        movies.stream().forEach(movie -> System.out.println(movie.toString()));
-//
         //actorsRepository.saveActor("Jack Doe");
-
         // System.out.println(actorsRepository.findActorsWithPrefix("o"));
 
 
